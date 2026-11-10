@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAT - Ejercicios</title>
+    
+    <!-- Cargar MathJax para las fórmulas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+
+        /* Estilos del Acordeón */
+        .chapter {
+            background-color: #fff;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: #34495e;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background 0.3s;
+        }
+
+        .chapter-header:hover {
+            background-color: #2c3e50;
+        }
+
+        .chapter-content {
+            display: none; /* Oculto por defecto */
+            padding: 15px;
+            background-color: #ecf0f1;
+        }
+
+        /* Estilos del Ejercicio */
+        .exercise-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+
+        .exercise-title {
+            padding: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2980b9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .exercise-title:hover {
+            background-color: #e8f6f3;
+        }
+
+        /* Área donde se muestra el contenido matemático */
+        .exercise-display {
+            display: none; /* Oculto por defecto */
+            padding: 20px;
+            background-color: #000; /* Fondo negro para imitar el estilo matemático */
+            color: #fff;
+            border-top: 1px solid #eee;
+            overflow-x: auto;
+        }
+
+        /* Estilos específicos para replicar el estilo matemático */
+        .math-container {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .math-block {
+            margin: 15px 0;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #ecf0f1;
+            text-align: left;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #ecf0f1;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MAT</h1>
+
+    <!-- CHAPITRE 1 -->
+    <div class="chapter">
+        <div class="chapter-header" onclick="toggleChapter(this)">
+            CHAPITRE 1
+        </div>
+        <div class="chapter-content">
+            
+            <!-- Ejercicio 1 -->
+            <div class="exercise-item">
+                <div class="exercise-title" onclick="toggleExercise(this)">
+                    <span>1. Calculer le terme \(u_1\). / Donner la valeur exacte de \(u_1\) et de \(u_2\). / Calculer \(w_0\).</span>
+                    <span>▼</span>
+                </div>
+                <div class="exercise-display">
+                    <div class="math-container">
+                        
+                        <span class="label">Données :</span>
+                        
+                        <div class="math-block">
+                            \[
+ u_n = \frac{3n^2+2n-1}{2n^2-5n+4} 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ w_n = 2n+3 
+\]
+                        </div>
+
+                        <div class="section-title">Calcul de \(u_1\) :</div>
+
+                        <div class="math-block">
+                            \[
+ u_1 = \frac{3(1)^2+2(1)-1}{2(1)^2-5(1)+4} 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ u_1 = \frac{3+2-1}{2-5+4} 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ \boxed{u_1=4} 
+\]
+                        </div>
+
+                        <div class="section-title">Calcul de \(u_2\) :</div>
+
+                        <div class="math-block">
+                            \[
+ u_2 = \frac{3(2)^2+2(2)-1}{2(2)^2-5(2)+4} 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ u_2 = \frac{12+4-1}{8-10+4} 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ \boxed{u_2=\frac{15}{2}} 
+\]
+                        </div>
+
+                        <div class="section-title">Calcul de \(w_0\) :</div>
+
+                        <div class="math-block">
+                            \[
+ w_0 = 2(0)+3 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ \boxed{w_0=3} 
+\]
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejercicio 8 -->
+            <div class="exercise-item">
+                <div class="exercise-title" onclick="toggleExercise(this)">
+                    <span>8. Déterminer / Calculer la limite de la suite \((u_n)\).</span>
+                    <span>▼</span>
+                </div>
+                <div class="exercise-display">
+                    <div class="math-container">
+                        
+                        <span class="label">Données :</span>
+                        
+                        <div class="math-block">
+                            \[
+ u_n = \frac{3n^2 + 2n - 1}{2n^2 - 5n + 4} \quad \quad n \in \mathbb{N} 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ \lim_{n \to +\infty} n = +\infty 
+\]
+                        </div>
+
+                        <span class="label" style="margin-top: 20px;">Calcul :</span>
+
+                        <div class="math-block">
+                            \[
+ \lim_{n \to +\infty} u_n = \lim_{n \to +\infty} \frac{3n^2 + 2n - 1}{2n^2 - 5n + 4} 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ = \lim_{n \to +\infty} \frac{3 + \frac{2}{n} - \frac{1}{n^2}}{2 - \frac{5}{n} + \frac{4}{n^2}} 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ = \frac{3 + 0 - 0}{2 - 0 + 0} 
+\]
+                        </div>
+
+                        <div class="math-block">
+                            \[
+ \boxed{\lim_{n \to +\infty} u_n = \frac{3}{2}} 
+\]
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CHAPITRE 2 -->
+    <div class="chapter">
+        <div class="chapter-header" onclick="toggleChapter(this)">
+            CHAPITRE 2
+        </div>
+        <div class="chapter-content">
+            <p>Contenu à venir...</p>
+        </div>
+    </div>
+
+    <!-- CHAPITRE 3 -->
+    <div class="chapter">
+        <div class="chapter-header" onclick="toggleChapter(this)">
+            CHAPITRE 3
+        </div>
+        <div class="chapter-content">
+            <p>Contenu à venir...</p>
+        </div>
+    </div>
+    
+    <!-- Puedes seguir agregando hasta el CHAPITRE 10 copiando el bloque de arriba -->
+
+    <script>
+        // Función para abrir/cerrar capítulos
+        function toggleChapter(element) {
+            var content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        // Función para abrir/cerrar el ejercicio
+        function toggleExercise(element) {
+            var display = element.nextElementSibling;
+            var arrow = element.querySelector('span:last-child');
+            
+            if (display.style.display === "block") {
+                display.style.display = "none";
+                arrow.textContent = "▼";
+            } else {
+                display.style.display = "block";
+                arrow.textContent = "▲";
+                // Re-renderizar MathJax al abrir para asegurar que las fórmulas se vean bien
+                MathJax.typesetPromise([display]); 
+            }
+        }
+    </script>
+</body>
+</html>
